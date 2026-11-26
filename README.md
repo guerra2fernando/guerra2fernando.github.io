@@ -54,6 +54,6 @@ If you later enable GitHub Actions billing, you can add a workflow that runs `np
 ## Notes
 
 - This is a user GitHub Pages site, so no `basePath` is required.
-- CV PDFs are served from `public/cv/`.
+- CV PDFs are served from `public/cv/` in light and dark variants.
 - Fonts are self-hosted in `public/fonts/` to keep builds deterministic.
 - The Open Graph image is `public/og.png`.
