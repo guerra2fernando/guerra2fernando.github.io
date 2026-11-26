@@ -45,7 +45,7 @@ To build and publish an update:
 npm run deploy
 ```
 
-This builds the static export, copies `out/` into a clean temporary directory, force-pushes it to `gh-pages` with a root `.nojekyll`, and asks GitHub Pages to rebuild.
+This builds the static export, copies `out/` into a clean temporary directory, force-pushes it to `gh-pages` with a root `.nojekyll`, and waits for GitHub Pages to build the new commit.
 
 GitHub Pages is configured with **Source: Deploy from a branch → `gh-pages` → `/ (root)`**. The expected URL is `https://guerra2fernando.github.io`.
 
