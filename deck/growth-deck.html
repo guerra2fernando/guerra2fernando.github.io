@@ -1,0 +1,1234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Fernando Guerra - Growth Deck</title>
+    <style>
+      @font-face {
+        font-family: "Space Grotesk";
+        src: url("../public/fonts/space-grotesk.woff2") format("woff2");
+        font-weight: 300 700;
+        font-display: block;
+      }
+      @font-face {
+        font-family: "Instrument Serif";
+        src: url("../public/fonts/instrument-serif-italic.woff2") format("woff2");
+        font-style: italic;
+        font-weight: 400;
+        font-display: block;
+      }
+      @font-face {
+        font-family: "JetBrains Mono";
+        src: url("../public/fonts/jetbrains-mono.woff2") format("woff2");
+        font-weight: 400 700;
+        font-display: block;
+      }
+
+      :root {
+        --ink: #070806;
+        --ink-2: #0b0d0a;
+        --bone: #f1f3e9;
+        --muted: #a4a99b;
+        --acid: #c9f25f;
+        --acid-soft: #e3ff9b;
+        --line: rgba(241, 243, 233, 0.12);
+        --card: rgba(255, 255, 255, 0.035);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        background: var(--ink);
+      }
+
+      body {
+        font-family: "Space Grotesk", sans-serif;
+        color: var(--bone);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .slide {
+        width: 1600px;
+        height: 900px;
+        position: relative;
+        overflow: hidden;
+        background: var(--ink);
+        page-break-after: always;
+      }
+
+      .slide:last-child {
+        page-break-after: auto;
+      }
+
+      .grid-bg {
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+        background-size: 80px 80px;
+        mask-image: linear-gradient(to right, black 0%, black 72%, transparent 100%);
+      }
+
+      .glow {
+        position: absolute;
+        right: -160px;
+        top: -220px;
+        width: 980px;
+        height: 980px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(201, 242, 95, 0.16), transparent 64%);
+        filter: blur(26px);
+      }
+
+      .glow.small {
+        right: -260px;
+        top: 260px;
+        width: 720px;
+        height: 720px;
+        opacity: 0.7;
+      }
+
+      .orb {
+        position: absolute;
+        right: 120px;
+        top: 170px;
+        width: 430px;
+        height: 430px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle at 42% 38%,
+          rgba(220, 255, 130, 0.95),
+          rgba(150, 205, 50, 0.38) 38%,
+          rgba(70, 110, 20, 0.12) 62%,
+          transparent 72%
+        );
+        box-shadow:
+          0 0 140px rgba(201, 242, 95, 0.18),
+          inset 0 0 80px rgba(201, 242, 95, 0.12);
+      }
+
+      .ring {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        border: 1px solid rgba(201, 242, 95, 0.24);
+        border-radius: 50%;
+        transform: translate(-50%, -50%) rotate(-22deg) scaleX(1.5);
+      }
+
+      .ring.one {
+        width: 430px;
+        height: 155px;
+      }
+
+      .ring.two {
+        width: 390px;
+        height: 130px;
+        transform: translate(-50%, -50%) rotate(46deg) scaleX(1.45);
+        opacity: 0.55;
+      }
+
+      .ring.three {
+        width: 350px;
+        height: 108px;
+        transform: translate(-50%, -50%) rotate(102deg) scaleX(1.4);
+        opacity: 0.35;
+      }
+
+      .satellite {
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--acid);
+        box-shadow: 0 0 20px rgba(201, 242, 95, 0.9);
+      }
+
+      .satellite.a {
+        right: 92px;
+        top: 138px;
+      }
+
+      .satellite.b {
+        right: 520px;
+        top: 570px;
+        width: 6px;
+        height: 6px;
+        opacity: 0.6;
+      }
+
+      .slide-inner {
+        position: relative;
+        z-index: 2;
+        height: 100%;
+        padding: 58px 72px 46px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-shrink: 0;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .mark {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        letter-spacing: 0.02em;
+        position: relative;
+      }
+
+      .mark::after {
+        content: "";
+        position: absolute;
+        right: 1px;
+        top: 1px;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--acid);
+        box-shadow: 0 0 12px rgba(201, 242, 95, 0.9);
+      }
+
+      .brand-name {
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+      }
+
+      .brand-role {
+        margin-top: 5px;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 9px;
+        letter-spacing: 0.16em;
+        color: var(--muted);
+      }
+
+      .status {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 9px;
+        letter-spacing: 0.14em;
+        color: var(--muted);
+      }
+
+      .status .dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--acid);
+        box-shadow: 0 0 10px rgba(201, 242, 95, 0.8);
+      }
+
+      .eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 10px;
+        letter-spacing: 0.2em;
+        color: var(--acid);
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        content: "";
+        width: 36px;
+        height: 1px;
+        background: rgba(201, 242, 95, 0.45);
+      }
+
+      .slide-number {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 10px;
+        letter-spacing: 0.16em;
+        color: var(--muted);
+      }
+
+      .display {
+        font-size: 92px;
+        line-height: 0.94;
+        font-weight: 500;
+        letter-spacing: -0.06em;
+      }
+
+      .display.small {
+        font-size: 64px;
+        line-height: 0.98;
+        letter-spacing: -0.05em;
+      }
+
+      .serif {
+        font-family: "Instrument Serif", serif;
+        font-style: italic;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+      }
+
+      .acid {
+        color: var(--acid);
+      }
+
+      .lede {
+        max-width: 720px;
+        font-size: 19px;
+        line-height: 1.55;
+        color: var(--muted);
+      }
+
+      .body {
+        font-size: 16px;
+        line-height: 1.55;
+        color: var(--muted);
+      }
+
+      .mono {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 10px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .muted {
+        color: var(--muted);
+      }
+
+      .cover-body {
+        margin-top: 92px;
+        max-width: 880px;
+      }
+
+      .cover-body h1 {
+        margin-top: 26px;
+      }
+
+      .cover-body .lede {
+        margin-top: 30px;
+      }
+
+      .footer {
+        margin-top: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid var(--line);
+        padding-top: 18px;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 9px;
+        letter-spacing: 0.12em;
+        color: var(--muted);
+        text-transform: uppercase;
+      }
+
+      .footer .right {
+        color: var(--acid);
+        opacity: 0.85;
+      }
+
+      .slide-body {
+        margin-top: 42px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+      }
+
+      .two-col {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 56px;
+        margin-top: 36px;
+        flex: 1;
+        min-height: 0;
+      }
+
+      .col-left,
+      .col-right {
+        min-width: 0;
+      }
+
+      .col-left .body {
+        margin-top: 24px;
+        max-width: 650px;
+      }
+
+      .timeline {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-top: 34px;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 10px;
+        letter-spacing: 0.14em;
+        color: var(--acid);
+      }
+
+      .timeline .line {
+        flex: 1;
+        height: 1px;
+        background: rgba(201, 242, 95, 0.28);
+      }
+
+      .industries {
+        margin-top: 20px;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 10px;
+        line-height: 1.6;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+        text-transform: uppercase;
+      }
+
+      .metric-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .metric {
+        border: 1px solid var(--line);
+        background: var(--card);
+        border-radius: 14px;
+        padding: 20px 20px 18px;
+      }
+
+      .metric-value {
+        font-size: 38px;
+        font-weight: 500;
+        letter-spacing: -0.05em;
+        color: var(--acid);
+        line-height: 1;
+      }
+
+      .metric-label {
+        margin-top: 10px;
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--bone);
+      }
+
+      .metric-note {
+        margin-top: 4px;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 8px;
+        line-height: 1.4;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+        text-transform: uppercase;
+      }
+
+      .metric-grid.compact .metric {
+        padding: 16px 16px 14px;
+      }
+
+      .metric-grid.compact .metric-value {
+        font-size: 32px;
+      }
+
+      .metric-grid.compact .metric-label {
+        font-size: 12px;
+      }
+
+      .subhead {
+        margin-top: 18px;
+        font-size: 17px;
+        color: var(--muted);
+      }
+
+      .case-block {
+        margin-top: 30px;
+      }
+
+      .case-block:first-child {
+        margin-top: 0;
+      }
+
+      .case-label {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 9px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--acid);
+      }
+
+      .case-block .body {
+        margin-top: 12px;
+      }
+
+      .case-list {
+        list-style: none;
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .case-list li {
+        position: relative;
+        padding-left: 22px;
+        font-size: 15px;
+        line-height: 1.45;
+        color: var(--muted);
+      }
+
+      .case-list li::before {
+        content: "▸";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: var(--acid);
+        font-size: 14px;
+      }
+
+      .case-list strong {
+        color: var(--bone);
+        font-weight: 500;
+      }
+
+      .footer-note {
+        margin-top: 14px;
+        padding-top: 14px;
+        border-top: 1px solid var(--line);
+        font-family: "JetBrains Mono", monospace;
+        font-size: 9px;
+        letter-spacing: 0.1em;
+        color: var(--muted);
+        text-transform: uppercase;
+      }
+
+      .profile-quote {
+        margin-top: auto;
+        padding-top: 22px;
+        border-top: 1px solid var(--line);
+        display: flex;
+        gap: 18px;
+        align-items: flex-start;
+        max-width: 1040px;
+      }
+
+      .profile-quote .quote-mark {
+        font-family: "Instrument Serif", serif;
+        font-style: italic;
+        font-size: 54px;
+        line-height: 0.7;
+        color: var(--acid);
+      }
+
+      .profile-quote p {
+        font-size: 22px;
+        line-height: 1.4;
+        letter-spacing: -0.02em;
+        color: var(--bone);
+      }
+
+      .profile-quote .mono {
+        display: block;
+        margin-top: 10px;
+        color: var(--muted);
+      }
+
+      .case-loop {
+        margin-top: auto;
+        padding-top: 18px;
+        border-top: 1px solid var(--line);
+        display: flex;
+        align-items: center;
+        gap: 24px;
+      }
+
+      .case-loop > .mono {
+        flex-shrink: 0;
+        color: var(--muted);
+      }
+
+      .case-loop-steps {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        font-size: 14px;
+        color: var(--bone);
+      }
+
+      .case-loop-steps .arrow {
+        color: var(--acid);
+      }
+
+      .loop-list {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .loop-step {
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+      }
+
+      .loop-number {
+        flex-shrink: 0;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        border: 1px solid rgba(201, 242, 95, 0.35);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 8px;
+        color: var(--acid);
+        margin-top: 2px;
+      }
+
+      .loop-step strong {
+        display: block;
+        font-size: 15px;
+        font-weight: 500;
+        color: var(--bone);
+      }
+
+      .loop-step span {
+        display: block;
+        margin-top: 4px;
+        font-size: 13px;
+        line-height: 1.45;
+        color: var(--muted);
+      }
+
+      .big-metric {
+        border-top: 1px solid var(--line);
+        padding-top: 18px;
+        margin-top: 18px;
+      }
+
+      .big-metric:first-child {
+        margin-top: 0;
+        border-top: none;
+        padding-top: 0;
+      }
+
+      .big-value {
+        font-size: 88px;
+        font-weight: 500;
+        letter-spacing: -0.07em;
+        line-height: 0.9;
+        color: var(--acid);
+      }
+
+      .big-label {
+        margin-top: 10px;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 9px;
+        letter-spacing: 0.12em;
+        color: var(--muted);
+        text-transform: uppercase;
+      }
+
+      .proof-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+        margin-top: 26px;
+        padding-top: 20px;
+        border-top: 1px solid var(--line);
+      }
+
+      .proof-row strong {
+        display: block;
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: -0.04em;
+        color: var(--bone);
+      }
+
+      .proof-row span {
+        display: block;
+        margin-top: 4px;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 8px;
+        line-height: 1.4;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+        text-transform: uppercase;
+      }
+
+      .system-strip {
+        margin-top: 24px;
+        padding-top: 18px;
+        border-top: 1px solid var(--line);
+      }
+
+      .system-strip > .mono {
+        color: var(--muted);
+      }
+
+      .system-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin-top: 14px;
+      }
+
+      .system-card {
+        border: 1px solid var(--line);
+        background: var(--card);
+        border-radius: 12px;
+        padding: 14px 16px;
+      }
+
+      .system-card strong {
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--acid);
+      }
+
+      .system-card span {
+        display: block;
+        margin-top: 4px;
+        font-size: 11px;
+        line-height: 1.4;
+        color: var(--muted);
+      }
+
+      .loop-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+
+      .loop-card {
+        border: 1px solid var(--line);
+        background: var(--card);
+        border-radius: 12px;
+        padding: 18px;
+      }
+
+      .loop-card .loop-number {
+        width: 24px;
+        height: 24px;
+        margin-bottom: 14px;
+      }
+
+      .loop-card strong {
+        display: block;
+        font-size: 15px;
+        font-weight: 500;
+        color: var(--bone);
+      }
+
+      .loop-card span {
+        display: block;
+        margin-top: 5px;
+        font-size: 12px;
+        line-height: 1.45;
+        color: var(--muted);
+      }
+
+      .role-list {
+        list-style: none;
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .role-list li {
+        position: relative;
+        padding-left: 20px;
+        font-size: 15px;
+        color: var(--bone);
+      }
+
+      .role-list li::before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: var(--acid);
+      }
+
+      .contact-card {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        margin-top: 28px;
+        padding-top: 22px;
+        border-top: 1px solid var(--line);
+      }
+
+      .qr-card {
+        flex-shrink: 0;
+        width: 116px;
+        height: 116px;
+        border-radius: 12px;
+        background: #fff;
+        padding: 9px;
+      }
+
+      .qr-card img {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      .contact-lines a {
+        display: block;
+        font-size: 17px;
+        color: var(--acid);
+        text-decoration: none;
+        letter-spacing: -0.02em;
+      }
+
+      .contact-lines .mono {
+        display: block;
+        margin-top: 6px;
+        color: var(--muted);
+        text-transform: none;
+        letter-spacing: 0.04em;
+      }
+
+      .closing {
+        margin-top: auto;
+        padding-top: 24px;
+        border-top: 1px solid var(--line);
+        font-size: 34px;
+        letter-spacing: -0.04em;
+        color: var(--bone);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- SLIDE 1: COVER -->
+    <section class="slide">
+      <div class="grid-bg"></div>
+      <div class="glow"></div>
+      <div class="orb">
+        <div class="ring one"></div>
+        <div class="ring two"></div>
+        <div class="ring three"></div>
+      </div>
+      <div class="satellite a"></div>
+      <div class="satellite b"></div>
+
+      <div class="slide-inner">
+        <div class="topbar">
+          <div class="brand">
+            <div class="mark">FG</div>
+            <div>
+              <div class="brand-name">Fernando Guerra</div>
+              <div class="brand-role">GROWTH OPERATOR / AI PRODUCT BUILDER</div>
+            </div>
+          </div>
+          <div class="status"><span class="dot"></span>OPEN TO NEW PROJECTS</div>
+        </div>
+
+        <div class="cover-body">
+          <div class="eyebrow">GROWTH DECK / 2026</div>
+          <h1 class="display">
+            I build, improve<br />
+            and iterate products<br />
+            that <span class="serif acid">think</span>.<br />
+            Then I help them <span class="serif">grow.</span>
+          </h1>
+          <p class="lede">
+            13+ years turning ambiguous ideas into products people use, and growth
+            engines that make them move.
+          </p>
+        </div>
+
+        <div class="footer">
+          <span>guerra2fernando.github.io</span>
+          <span>fern2gue@gmail.com</span>
+          <span class="right">TBILISI · NEW YORK · SÃO PAULO</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 2: PROFILE -->
+    <section class="slide">
+      <div class="grid-bg"></div>
+      <div class="slide-inner">
+        <div class="topbar">
+          <div class="eyebrow">01 / THE PROFILE</div>
+          <div class="slide-number">02</div>
+        </div>
+
+        <div class="slide-body">
+          <div class="two-col">
+            <div class="col-left">
+              <h2 class="display small">
+                A growth operator<br />
+                who <span class="serif acid">builds.</span>
+              </h2>
+              <p class="body">
+                I have spent 13+ years at the intersection of growth, product and
+                systems. I have led acquisition, CRM and lifecycle at operator
+                scale, built zero-budget loops that acquired 1M+ users, and shipped
+                the AI systems that make those loops run.
+              </p>
+              <div class="timeline">
+                <span>2012</span>
+                <span class="line"></span>
+                <span>2026</span>
+              </div>
+              <div class="industries">
+                iGaming · Fintech · Marketplaces · Enterprise SaaS · AI products ·
+                Creative
+              </div>
+            </div>
+
+            <div class="col-right">
+              <div class="metric-grid">
+                <div class="metric">
+                  <div class="metric-value">+43%</div>
+                  <div class="metric-label">NGR growth</div>
+                  <div class="metric-note">iGaming operator, 10 months</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-value">+38%</div>
+                  <div class="metric-label">Active players</div>
+                  <div class="metric-note">Same operator, 10 months</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-value">-22%</div>
+                  <div class="metric-label">Player churn</div>
+                  <div class="metric-note">Same operator, 10 months</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-value">1M+</div>
+                  <div class="metric-label">Organic users</div>
+                  <div class="metric-note">Trademap, zero budget</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-value">60K</div>
+                  <div class="metric-label">Users in 60 days</div>
+                  <div class="metric-note">Guru investment app</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-value">$20M</div>
+                  <div class="metric-label">Budget owned</div>
+                  <div class="metric-note">Santander, 10 business units</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="profile-quote">
+            <div class="quote-mark">“</div>
+            <div>
+              <p>
+                The best growth channel is a product that works. Everything else
+                is distribution for that truth.
+              </p>
+              <span class="mono">Operating principle</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 3: IGAMING CASE STUDY -->
+    <section class="slide">
+      <div class="grid-bg"></div>
+      <div class="slide-inner">
+        <div class="topbar">
+          <div class="eyebrow">02 / CASE STUDY</div>
+          <div class="slide-number">03</div>
+        </div>
+
+        <div class="slide-body">
+          <h2 class="display small">
+            From flat retention to<br />
+            <span class="serif acid">+43% NGR</span> in ten months.
+          </h2>
+          <p class="subhead">Confidential iGaming operator. Head of Growth &amp; CRM.</p>
+
+          <div class="two-col">
+            <div class="col-left">
+              <div class="case-block">
+                <div class="case-label">The challenge</div>
+                <p class="body">
+                  A sportsbook and casino brand with a large player base, flat
+                  retention and a bonus-heavy acquisition mix.
+                </p>
+              </div>
+              <div class="case-block">
+                <div class="case-label">What changed</div>
+                <ul class="case-list">
+                  <li>Rebuilt segmentation into <strong>14 lifecycle and value tiers</strong>.</li>
+                  <li>Launched <strong>45 automated journeys</strong> across email, SMS, push and in-app.</li>
+                  <li>Rebuilt the VIP and loyalty programme around the <strong>top 5% of players</strong>.</li>
+                  <li>Ran <strong>60+ A/B tests</strong> and raised deliverability from 91% to <strong>98.7%</strong>.</li>
+                </ul>
+              </div>
+              <div class="case-block">
+                <div class="case-label">The result</div>
+                <p class="body">
+                  A retention system that lifted NGR 43%, reactivated 11,400 players
+                  and added €1.6M in incremental NGR.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-right">
+              <div class="metric-grid compact">
+                <div class="metric">
+                  <div class="metric-value">+43%</div>
+                  <div class="metric-label">NGR</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-value">+38%</div>
+                  <div class="metric-label">Active players</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-value">-22%</div>
+                  <div class="metric-label">Churn</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-value">98.7%</div>
+                  <div class="metric-label">Deliverability</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-value">11.4K</div>
+                  <div class="metric-label">Players reactivated</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-value">€1.6M</div>
+                  <div class="metric-label">Incremental NGR</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-value">+29%</div>
+                  <div class="metric-label">VIP LTV</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-value">68K</div>
+                  <div class="metric-label">Opted-in database</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="case-loop">
+            <span class="mono">The loop</span>
+            <div class="case-loop-steps">
+              <span>Segment</span>
+              <span class="arrow">→</span>
+              <span>Journey</span>
+              <span class="arrow">→</span>
+              <span>Offer</span>
+              <span class="arrow">→</span>
+              <span>Measure</span>
+              <span class="arrow">→</span>
+              <span>Repeat</span>
+            </div>
+          </div>
+
+          <div class="footer-note">
+            6-person team · €1.4M budget · 120+ localised campaigns in Georgian,
+            English and Russian
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 4: ZERO-BUDGET GROWTH -->
+    <section class="slide">
+      <div class="grid-bg"></div>
+      <div class="slide-inner">
+        <div class="topbar">
+          <div class="eyebrow">03 / CASE STUDY</div>
+          <div class="slide-number">04</div>
+        </div>
+
+        <div class="slide-body">
+          <h2 class="display small">
+            1M+ organic users<br />
+            in twelve months, with <span class="serif acid">no media budget.</span>
+          </h2>
+          <p class="subhead">Trademap, Brazil's #1 investor app.</p>
+
+          <div class="two-col">
+            <div class="col-left">
+              <div class="case-label">The loop</div>
+              <div class="loop-list">
+                <div class="loop-step">
+                  <div class="loop-number">01</div>
+                  <div>
+                    <strong>Referral in the product.</strong>
+                    <span>Invite mechanics built into the core experience, not bolted on.</span>
+                  </div>
+                </div>
+                <div class="loop-step">
+                  <div class="loop-number">02</div>
+                  <div>
+                    <strong>Social amplification.</strong>
+                    <span>Every user action created a reason to bring another user in.</span>
+                  </div>
+                </div>
+                <div class="loop-step">
+                  <div class="loop-number">03</div>
+                  <div>
+                    <strong>Community and content.</strong>
+                    <span>Community became the acquisition channel, not a support function.</span>
+                  </div>
+                </div>
+                <div class="loop-step">
+                  <div class="loop-number">04</div>
+                  <div>
+                    <strong>Positioning.</strong>
+                    <span>Made the product the default choice for a new investor in Brazil.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-right">
+              <div class="big-metric">
+                <div class="big-value">1M+</div>
+                <div class="big-label">Organic users in 12 months</div>
+              </div>
+              <div class="big-metric">
+                <div class="big-value">0</div>
+                <div class="big-label">Media budget</div>
+              </div>
+              <div class="proof-row">
+                <div>
+                  <strong>60K</strong>
+                  <span>Users in 60 days at Guru</span>
+                </div>
+                <div>
+                  <strong>4,500</strong>
+                  <span>GitHub stars at Superduper</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="system-strip">
+            <span class="mono">The same loop thinking now runs through the systems I build</span>
+            <div class="system-cards">
+              <div class="system-card">
+                <strong>OpenOutreach</strong>
+                <span>LinkedIn growth engine</span>
+              </div>
+              <div class="system-card">
+                <strong>LenGrowth</strong>
+                <span>Growth workspace with 40+ agents</span>
+              </div>
+              <div class="system-card">
+                <strong>LenManag</strong>
+                <span>Lead URL to tailored site in minutes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 5: HOW I WORK -->
+    <section class="slide">
+      <div class="grid-bg"></div>
+      <div class="glow small"></div>
+      <div class="slide-inner">
+        <div class="topbar">
+          <div class="eyebrow">04 / HOW I WORK</div>
+          <div class="slide-number">05</div>
+        </div>
+
+        <div class="slide-body">
+          <h2 class="display small">
+            Find the leverage point.<br />
+            Build the system. <span class="serif acid">Measure the outcome.</span>
+          </h2>
+
+          <div class="two-col">
+            <div class="col-left">
+              <div class="loop-grid">
+                <div class="loop-card">
+                  <div class="loop-number">01</div>
+                  <strong>Research</strong>
+                  <span>Know who to target and why now.</span>
+                </div>
+                <div class="loop-card">
+                  <div class="loop-number">02</div>
+                  <strong>Acquisition</strong>
+                  <span>Paid, organic, referral and community.</span>
+                </div>
+                <div class="loop-card">
+                  <div class="loop-number">03</div>
+                  <strong>Activation</strong>
+                  <span>Onboarding, first value and first deposit.</span>
+                </div>
+                <div class="loop-card">
+                  <div class="loop-number">04</div>
+                  <strong>Retention</strong>
+                  <span>Lifecycle, CRM, VIP and churn.</span>
+                </div>
+                <div class="loop-card">
+                  <div class="loop-number">05</div>
+                  <strong>Monetization</strong>
+                  <span>NGR, LTV, pricing and offers.</span>
+                </div>
+                <div class="loop-card">
+                  <div class="loop-number">06</div>
+                  <strong>Referral</strong>
+                  <span>Loops that compound.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-right">
+              <div class="case-label">What I'm looking for</div>
+              <ul class="role-list">
+                <li>Head of Growth / Growth Lead</li>
+                <li>Growth Operator / Fractional Growth</li>
+                <li>Growth + AI product roles</li>
+                <li>Advisory and consulting</li>
+              </ul>
+
+              <div class="contact-card">
+                <div class="qr-card">
+                  <img src="qr.png" alt="QR code to the portfolio" />
+                </div>
+                <div class="contact-lines">
+                  <span class="mono acid">FULL PORTFOLIO</span>
+                  <a href="https://guerra2fernando.github.io">guerra2fernando.github.io</a>
+                  <span class="mono">fern2gue@gmail.com</span>
+                  <span class="mono">linkedin.com/in/fernando2guerra</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="closing">
+            If the problem is hard, I am <span class="serif acid">interested.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
