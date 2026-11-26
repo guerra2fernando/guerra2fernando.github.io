@@ -2,7 +2,9 @@
 
 A dark, editorial portfolio for Fernando Guerra: AI engineer, growth operator and founder.
 
-Built with Next.js 15 (static export), React 19, Tailwind CSS, shadcn-style UI primitives and Three.js. Deployed to GitHub Pages.
+**Live:** [guerra2fernando.github.io](https://guerra2fernando.github.io)
+
+Built with Next.js 15 (static export), React 19, Tailwind CSS, shadcn-style UI primitives and Three.js. Published to GitHub Pages from the `gh-pages` branch.
 
 ## Pages
 
@@ -35,18 +37,23 @@ The hero scene is in [`components/hero-scene.tsx`](components/hero-scene.tsx). I
 
 ## Deployment
 
-The repository includes a GitHub Actions workflow at `.github/workflows/deploy.yml` that builds the static export and publishes it to GitHub Pages on every push to `main`.
+The live site is published from the `gh-pages` branch. GitHub Actions is not required.
 
-To enable Pages for this repository:
+To build and publish an update:
 
-1. Go to **Settings → Pages**.
-2. Set **Build and deployment → Source** to **GitHub Actions**.
-3. Push to `main`.
+```powershell
+npm run deploy
+```
 
-The expected URL is `https://guerra2fernando.github.io`.
+This builds the static export, copies `out/` into a clean temporary directory, force-pushes it to `gh-pages` with a root `.nojekyll`, and asks GitHub Pages to rebuild.
+
+GitHub Pages is configured with **Source: Deploy from a branch → `gh-pages` → `/ (root)`**. The expected URL is `https://guerra2fernando.github.io`.
+
+If you later enable GitHub Actions billing, you can add a workflow that runs `npm ci && npm run build` and publishes `out/`; the static export is already compatible.
 
 ## Notes
 
-- The site is a user GitHub Pages site, so no `basePath` is required.
+- This is a user GitHub Pages site, so no `basePath` is required.
 - CV PDFs are served from `public/cv/`.
 - Fonts are self-hosted in `public/fonts/` to keep builds deterministic.
+- The Open Graph image is `public/og.png`.
