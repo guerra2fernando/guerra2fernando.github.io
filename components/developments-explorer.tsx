@@ -481,19 +481,38 @@ export function DevelopmentsExplorer() {
                 conversation.
               </p>
             </div>
-            <div className="flex flex-wrap gap-2">
-              <Button asChild variant="outline" size="sm">
-                <a href="/cv/fernando-guerra-igaming.pdf" download>
-                  Growth CV
-                  <ArrowDownToLine />
-                </a>
-              </Button>
-              <Button asChild variant="outline" size="sm">
-                <a href="/cv/fernando-guerra-ai-engineer.pdf" download>
-                  AI CV
-                  <ArrowDownToLine />
-                </a>
-              </Button>
+            <div className="flex flex-col gap-2 md:items-end">
+              <div className="flex flex-wrap gap-2">
+                <Button asChild variant="outline" size="sm">
+                  <a href="/cv/fernando-guerra-igaming.pdf" download>
+                    Growth CV (Light)
+                    <ArrowDownToLine />
+                  </a>
+                </Button>
+                <Button asChild variant="outline" size="sm">
+                  <a href="/cv/fernando-guerra-igaming-dark.pdf" download>
+                    Growth CV (Dark)
+                    <ArrowDownToLine />
+                  </a>
+                </Button>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                <Button asChild variant="outline" size="sm">
+                  <a href="/cv/fernando-guerra-ai-engineer.pdf" download>
+                    AI CV (Light)
+                    <ArrowDownToLine />
+                  </a>
+                </Button>
+                <Button asChild variant="outline" size="sm">
+                  <a href="/cv/fernando-guerra-ai-engineer-dark.pdf" download>
+                    AI CV (Dark)
+                    <ArrowDownToLine />
+                  </a>
+                </Button>
+              </div>
+              <p className="font-mono text-[9px] uppercase tracking-[0.1em] text-bone-muted/50">
+                Light for print, dark for digital
+              </p>
             </div>
           </div>
 
