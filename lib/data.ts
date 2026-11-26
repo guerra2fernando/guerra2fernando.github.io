@@ -60,9 +60,9 @@ export const projects: Project[] = [
     name: "OpenOutreach",
     tagline: "The LinkedIn growth engine that finds its own leads.",
     description:
-      "Describe the product and the market. OpenOutreach discovers LinkedIn profiles, learns your ideal customer profile with a Gaussian-process model, qualifies each lead with an LLM, and runs multi-turn follow-ups — no contact list required. It ships with a desktop daemon, multi-tenant billing and a stealth browser layer that runs from your own IP.",
+      "Describe the product and the market. OpenOutreach discovers LinkedIn profiles, learns your ideal customer profile with a Gaussian-process model, qualifies each lead with an LLM, and runs multi-turn follow-ups. No contact list required. It ships with a desktop daemon, multi-tenant billing and a stealth browser layer that runs from your own IP.",
     category: "AI & Agents",
-    year: "2025 — now",
+    year: "2025 to now",
     status: "Live",
     tech: ["FastAPI", "Next.js", "MongoDB", "Playwright", "scikit-learn", "AWS"],
     links: [
@@ -85,7 +85,7 @@ export const projects: Project[] = [
     description:
       "An AI-assisted revenue workflow that crawls a prospect's site, extracts positioning and brand signals, generates a conversion-focused website preview, and lets an operator refine it before sharing. Lead intake, research, generation, review, outreach and engagement analytics live in one system.",
     category: "Products",
-    year: "2025 — now",
+    year: "2025 to now",
     status: "Private",
     tech: ["Next.js", "FastAPI", "Celery", "MongoDB", "Redis", "AWS Bedrock"],
     highlights: [
@@ -104,7 +104,7 @@ export const projects: Project[] = [
     description:
       "A call intelligence and next-best-action platform for sales, support and collections teams. Xtrac ingests recordings, transcribes them through multiple providers, scores every conversation against configurable campaign rules, and generates coaching tasks and compliance reviews automatically.",
     category: "AI & Agents",
-    year: "2025 — now",
+    year: "2025 to now",
     status: "Private",
     tech: ["FastAPI", "Next.js", "MongoDB", "Redis", "Celery", "Gemini"],
     highlights: [
@@ -121,9 +121,9 @@ export const projects: Project[] = [
     name: "Army / ArmLenQuant",
     tagline: "A self-evolving agent organisation with a split brain.",
     description:
-      "Cloud decides, local executes. Army routes natural-language work to specialist agents — an orchestrator, crypto sentinel, job hunter, ideas machine and a meta-builder that spawns new capabilities. RAG memory, Telegram briefings and 475 passing tests make it the operating layer for everything else.",
+      "Cloud decides, local executes. Army routes natural-language work to specialist agents: an orchestrator, crypto sentinel, job hunter, ideas machine and a meta-builder that spawns new capabilities. RAG memory, Telegram briefings and 475 passing tests make it the operating layer for everything else.",
     category: "AI & Agents",
-    year: "2025 — now",
+    year: "2025 to now",
     status: "Open source",
     tech: ["Python", "FastAPI", "Next.js", "MongoDB", "RAG", "Docker"],
     links: [{ label: "Repository", href: "https://github.com/guerra2fernando/army", kind: "repo" }],
@@ -143,7 +143,7 @@ export const projects: Project[] = [
     description:
       "A shared workspace where growth teams and AI agents do the work together. LenGrowth connects analytics, paid media, SEO, content and competitor intelligence, then gives every workspace a fleet of specialist agents that can pull data, draft assets, run tasks and report back inside LenOS.",
     category: "Growth",
-    year: "2025 — now",
+    year: "2025 to now",
     status: "Live",
     tech: ["FastAPI", "React", "MongoDB", "Redis", "Celery", "Gemini"],
     links: [{ label: "Website", href: "https://lengrowth.com", kind: "live" }],
@@ -161,19 +161,18 @@ export const projects: Project[] = [
     name: "LenOS",
     tagline: "A workspace where humans and agents build in the same room.",
     description:
-      "A self-hostable workspace built on a Nostr relay. People and agents share channels, threads, workflows, git events and voice huddles — every message, review and tool call is a signed event with the same identity model and audit trail. Rust underneath, a calm product on top.",
+      "A private workspace built on a Nostr relay. People and agents share channels, threads, workflows, git events and voice huddles. Every message, review and tool call is a signed event with the same identity model and audit trail. Rust underneath, a calm product on top.",
     category: "Products",
     year: "2026",
-    status: "Open source",
+    status: "Private",
     tech: ["Rust", "Nostr", "Tauri", "React", "Flutter", "PostgreSQL"],
-    links: [{ label: "Repository", href: "https://github.com/Len-OS/LenOS", kind: "repo" }],
     highlights: [
       "Desktop, web and mobile clients over one signed event log.",
       "Agents get keypairs, channels, tools and a full transcript trail.",
       "Git, workflows, canvases, forums and voice huddles in the same workspace.",
-      "Self-hostable relay with scoped, community-local state.",
+      "Private relay with scoped, community-local state.",
     ],
-    metric: { value: "Apache 2.0", label: "open source" },
+    metric: { value: "3", label: "clients, one log" },
     glyph: "relay",
   },
   {
@@ -183,7 +182,7 @@ export const projects: Project[] = [
     description:
       "Multi-horizon forecasting with LightGBM and Random Forest, genetic strategy evolution and Bayesian optimization across 100+ exchanges. The Chrome extension adds market-regime detection, leverage guidance and behavioural guardrails directly inside Binance Futures.",
     category: "Finance",
-    year: "2025 — now",
+    year: "2025 to now",
     status: "Private",
     tech: ["Python", "LightGBM", "ccxt", "Chrome Extension", "MongoDB"],
     highlights: [
@@ -202,7 +201,7 @@ export const projects: Project[] = [
     description:
       "Open-source book creation where specialist agents handle concept, outline, characters, worldbuilding, chapters, editing and formatting. Bring OpenAI, Claude, Gemini, DeepSeek, Mistral or any OpenRouter model; prompts are external YAML and every run tracks its own cost.",
     category: "Creative",
-    year: "2024 — now",
+    year: "2024 to now",
     status: "Open source",
     tech: ["Python", "LLM APIs", "OpenRouter", "YAML", "CLI"],
     links: [
@@ -215,7 +214,7 @@ export const projects: Project[] = [
       "External YAML prompt templates and a self-healing JSON parser.",
       "Per-run LLM cost tracking and local knowledge retrieval.",
     ],
-    metric: { value: "131", label: "GitHub stars" },
+    metric: { value: "7", label: "specialist agents" },
     glyph: "book",
   },
   {
@@ -245,7 +244,7 @@ export const projects: Project[] = [
     name: "Evvaa",
     tagline: "A voice-first AI assistant that actually operates Windows.",
     description:
-      "A personal desktop assistant with voice and text control. Evvaa listens through AWS Transcribe, speaks through Polly, thinks with Claude on Bedrock, and executes 13 built-in tools across files, apps and the clipboard — all from a floating overlay with memory and preferences.",
+      "A personal desktop assistant with voice and text control. Evvaa listens through AWS Transcribe, speaks through Polly, thinks with Claude on Bedrock, and executes 13 built-in tools across files, apps and the clipboard, all from a floating overlay with memory and preferences.",
     category: "AI & Agents",
     year: "2026",
     status: "Private",
@@ -265,7 +264,7 @@ export const projects: Project[] = [
     description:
       "An AI assistant that recognises emotional state, keeps conversational context and executes actions across GitHub, Gmail, Google Calendar, Spotify, Trello, Jira, Instagram, YouTube and Google Meet. Python backend, Node frontend, built as a multi-service product.",
     category: "AI & Agents",
-    year: "2023 — 2025",
+    year: "2023 to 2025",
     status: "Private",
     tech: ["Python", "Node.js", "TensorFlow", "PyTorch", "Google Workspace"],
     highlights: [
@@ -328,7 +327,7 @@ export const projects: Project[] = [
       "Contacts, companies, deals and pipeline management.",
       "Playwright MCP for browser-assisted sales workflows.",
       "Multi-tenant ERP provisioning, billing and domain management.",
-      "The platform foundation for Champion's LenERP deployment.",
+      "The platform foundation for a private LenERP deployment.",
     ],
     glyph: "grid",
   },
@@ -357,7 +356,7 @@ export const projects: Project[] = [
     description:
       "An automated cold-outreach platform built around AI voice calls. LenCall combines Amazon Connect for telephony, Bedrock for voice generation, a FastAPI backend and a Next.js dashboard to run configurable outbound campaigns with call tracking and performance monitoring.",
     category: "AI & Agents",
-    year: "2025 — now",
+    year: "2025 to now",
     status: "Private",
     tech: ["FastAPI", "Next.js", "Amazon Connect", "Bedrock", "MongoDB"],
     highlights: [
@@ -389,7 +388,7 @@ export const projects: Project[] = [
   {
     slug: "credit-pack",
     name: "Credit Pack",
-    tagline: "Where to get credit in 50 countries — before you book the flight.",
+    tagline: "Where to get credit in 50 countries before you book the flight.",
     description:
       "A deeply researched guide to consumer credit across 50 countries: fastest routes, minimum documents, foreigner eligibility, risk warnings and best-path recommendations ranked by speed, amount and accessibility. Built as a decision tool for expats, founders and advisors.",
     category: "Finance",
@@ -512,7 +511,7 @@ export const projects: Project[] = [
     name: "LeadForge",
     tagline: "A company URL to a full outreach package in 60 seconds.",
     description:
-      "Paste a company website and what you sell. LeadForge reads the site, extracts company intelligence and generates a LinkedIn note, follow-up, cold email, phone opener, WhatsApp opener, objection handlers and a tailored value hook — one credit per analysis.",
+      "Paste a company website and what you sell. LeadForge reads the site, extracts company intelligence and generates a LinkedIn note, follow-up, cold email, phone opener, WhatsApp opener, objection handlers and a tailored value hook. One credit per analysis.",
     category: "Growth",
     year: "2026",
     status: "Private",
@@ -621,16 +620,16 @@ export const projects: Project[] = [
   },
   {
     slug: "lenerp",
-    name: "LenERP / Champion",
-    tagline: "A field-service ERP built for a drilling company.",
+    name: "LenERP",
+    tagline: "A field-service ERP built for a drilling operation.",
     description:
-      "Champion Well Drilling's operating system on Frappe and ERPNext: wells, drilling jobs, dispatch, crews, equipment, materials, completion, invoicing, payroll, quality, support and management reporting. The workspace covers the proposal, implementation plan, acceptance, migration, training and handover.",
+      "A field-service operating system on Frappe and ERPNext for a drilling company: wells, drilling jobs, dispatch, crews, equipment, materials, completion, invoicing, payroll, quality, support and management reporting. The workspace covers the proposal, implementation plan, acceptance, migration, training and handover.",
     category: "Products",
     year: "2026",
     status: "Private",
     tech: ["Frappe", "ERPNext", "Python", "MariaDB", "AWS", "Cloudflare"],
     highlights: [
-      "Champion-specific DocTypes, workflows, roles and reports.",
+      "Client-specific DocTypes, workflows, roles and reports.",
       "Three-layer architecture across platform, product and upstream.",
       "Proposal, implementation, acceptance and handover workspace.",
       "Production on AWS behind Cloudflare with off-server backups.",
@@ -701,7 +700,7 @@ export const projects: Project[] = [
     name: "LenGeas",
     tagline: "A universal, data-driven game systems platform.",
     description:
-      "A documentation-first platform for building focused games from shared systems and versioned content definitions. Architecture, schema, traceability and delivery gates are specified before any product code is allowed — a platform, not a bundle of unrelated mechanics.",
+      "A documentation-first platform for building focused games from shared systems and versioned content definitions. Architecture, schema, traceability and delivery gates are specified before any product code is allowed. A platform, not a bundle of unrelated mechanics.",
     category: "Research",
     year: "2026",
     status: "Research",
@@ -802,14 +801,13 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
-    company: "LeaderBet",
+    company: "Confidential iGaming Operator",
     role: "Head of Growth & CRM",
-    period: "Jan 2026 — Present",
+    period: "Jan 2026 to Nov 2026",
     location: "Tbilisi, Georgia",
     tags: ["iGaming", "Growth"],
-    current: true,
     summary:
-      "Own growth, CRM and lifecycle marketing for a Georgian sportsbook and casino brand, across acquisition, retention, VIP, affiliates and a 120+ campaign calendar.",
+      "Owned growth, CRM and lifecycle marketing for a sportsbook and casino brand, across acquisition, retention, VIP, affiliates and a 120+ campaign calendar.",
     highlights: [
       "Delivered +43% NGR, +38% active players and -22% churn in ten months, with the bonus cost ratio down 17%.",
       "Rebuilt segmentation into 14 lifecycle and value tiers and launched 45 automated journeys; FTD-to-second-deposit conversion rose from 34% to 52%.",
@@ -825,8 +823,8 @@ export const experiences: Experience[] = [
   },
   {
     company: "Lenxys",
-    role: "Founder — AI Product & Systems Architecture",
-    period: "2023 — 2025",
+    role: "Founder, AI Product & Systems Architecture",
+    period: "2023 to 2025",
     location: "Remote",
     tags: ["AI & Tech", "Creative"],
     summary:
@@ -840,8 +838,8 @@ export const experiences: Experience[] = [
   },
   {
     company: "MongoDB",
-    role: "Vector Search Consultant — Retrieval Optimization",
-    period: "2024 — 2025",
+    role: "Vector Search Consultant, Retrieval Optimization",
+    period: "2024 to 2025",
     location: "Remote",
     tags: ["AI & Tech", "Enterprise", "Fintech", "iGaming"],
     summary:
@@ -856,8 +854,8 @@ export const experiences: Experience[] = [
   },
   {
     company: "Superduper",
-    role: "Head of Growth — Developer Ecosystem",
-    period: "2023 — 2024",
+    role: "Head of Growth, Developer Ecosystem",
+    period: "2023 to 2024",
     location: "Remote",
     tags: ["AI & Tech", "Growth"],
     summary:
@@ -872,8 +870,8 @@ export const experiences: Experience[] = [
   },
   {
     company: "Bondai",
-    role: "Director of Growth — Marketplace Systems",
-    period: "2022 — 2023",
+    role: "Director of Growth, Marketplace Systems",
+    period: "2022 to 2023",
     location: "Remote",
     tags: ["Growth", "Enterprise"],
     summary:
@@ -888,7 +886,7 @@ export const experiences: Experience[] = [
   {
     company: "Casafy",
     role: "CMO & Growth Advisor",
-    period: "2021 — 2022",
+    period: "2021 to 2022",
     location: "Brazil",
     tags: ["Growth", "Enterprise"],
     summary:
@@ -903,8 +901,8 @@ export const experiences: Experience[] = [
   },
   {
     company: "Exio",
-    role: "Co-Founder & Partner — AI Product Strategy",
-    period: "2020 — 2022",
+    role: "Co-Founder & Partner, AI Product Strategy",
+    period: "2020 to 2022",
     location: "Brazil",
     tags: ["AI & Tech", "Growth"],
     summary:
@@ -918,8 +916,8 @@ export const experiences: Experience[] = [
   },
   {
     company: "Guru",
-    role: "Head of Growth — Acquisition & Retention",
-    period: "2019 — 2021",
+    role: "Head of Growth, Acquisition & Retention",
+    period: "2019 to 2021",
     location: "Brazil",
     tags: ["Fintech", "Growth"],
     summary:
@@ -933,9 +931,9 @@ export const experiences: Experience[] = [
     metrics: [{ value: "60K", label: "users in 60 days" }],
   },
   {
-    company: "Stake.com",
+    company: "Confidential Crypto Casino",
     role: "Marketing & Growth Consultant",
-    period: "2018 — 2022",
+    period: "2018 to 2022",
     location: "Global / Remote",
     tags: ["iGaming", "Growth"],
     summary:
@@ -966,7 +964,7 @@ export const experiences: Experience[] = [
   {
     company: "Santander",
     role: "Head of Digital Marketing & Growth",
-    period: "2018 — 2019",
+    period: "2018 to 2019",
     location: "Brazil",
     tags: ["Fintech", "Enterprise", "Growth"],
     summary:
@@ -984,7 +982,7 @@ export const experiences: Experience[] = [
   },
   {
     company: "Banco BS2",
-    role: "Growth Marketing Manager — Digital Acquisition",
+    role: "Growth Marketing Manager, Digital Acquisition",
     period: "2018",
     location: "Brazil",
     tags: ["Fintech", "Growth"],
@@ -999,7 +997,7 @@ export const experiences: Experience[] = [
   },
   {
     company: "Stormsales",
-    role: "Founder — Enterprise Sales Automation",
+    role: "Founder, Enterprise Sales Automation",
     period: "2017",
     location: "Brazil",
     tags: ["Enterprise", "AI & Tech"],
@@ -1015,8 +1013,8 @@ export const experiences: Experience[] = [
   },
   {
     company: "Netshow.me",
-    role: "Growth Hacker — Lead Generation Automation",
-    period: "2016 — 2017",
+    role: "Growth Hacker, Lead Generation Automation",
+    period: "2016 to 2017",
     location: "Brazil",
     tags: ["Growth"],
     summary:
@@ -1030,8 +1028,8 @@ export const experiences: Experience[] = [
   },
   {
     company: "Collinson Group",
-    role: "Senior Web Designer — Digital Experiences",
-    period: "2014 — 2016",
+    role: "Senior Web Designer, Digital Experiences",
+    period: "2014 to 2016",
     location: "Hong Kong",
     tags: ["Creative", "Enterprise"],
     summary:
@@ -1045,8 +1043,8 @@ export const experiences: Experience[] = [
   },
   {
     company: "Gradiente",
-    role: "Art & Product Coordinator — Product Launches",
-    period: "2012 — 2013",
+    role: "Art & Product Coordinator, Product Launches",
+    period: "2012 to 2013",
     location: "Brazil",
     tags: ["Creative"],
     summary:
@@ -1083,8 +1081,8 @@ export const industries = [
     name: "iGaming & Sportsbook",
     icon: "dice",
     description:
-      "Acquisition, CRM, lifecycle and retention at operator scale — sportsbook, casino, VIP, affiliates and responsible gaming.",
-    proof: "+43% NGR at LeaderBet · Stake.com consulting",
+      "Acquisition, CRM, lifecycle and retention at operator scale: sportsbook, casino, VIP, affiliates and responsible gaming.",
+    proof: "+43% NGR at a confidential iGaming operator · crypto casino consulting",
   },
   {
     name: "Fintech & Banking",
@@ -1111,18 +1109,18 @@ export const industries = [
     name: "Creative & Games",
     icon: "sparkles",
     description:
-      "Design, narrative and interactive systems — from loyalty experiences to card-game bibles and playable instruments.",
+      "Design, narrative and interactive systems, from loyalty experiences to card-game bibles and playable instruments.",
     proof: "Aetheris · Orrery · Collinson · webcomic",
   },
 ];
 
 export const highlights = [
-  { value: "+43%", label: "NGR growth", note: "LeaderBet, 10 months" },
+  { value: "+43%", label: "NGR growth", note: "iGaming operator, 10 months" },
   { value: "1M+", label: "organic users", note: "Trademap, zero budget" },
   { value: "$20M", label: "budget owned", note: "Santander, 10 units" },
   { value: "60K", label: "users in 60 days", note: "Guru investment app" },
   { value: "40%", label: "search performance", note: "MongoDB vector search" },
-  { value: "131", label: "GitHub stars", note: "LibriScribe, open source" },
+  { value: "€1.6M", label: "incremental NGR", note: "reactivation programme" },
   { value: "4.5K", label: "community stars", note: "Superduper developer brand" },
   { value: "35+", label: "products & tools", note: "across six industries" },
 ];
@@ -1138,7 +1136,7 @@ export const principles = [
   },
   {
     title: "Design is strategy",
-    body: "The interface is where a business model becomes obvious — or impossible. Visual systems and product logic are the same conversation.",
+    body: "The interface is where a business model becomes obvious, or impossible. Visual systems and product logic are the same conversation.",
   },
   {
     title: "Automate the repeatable",
@@ -1212,7 +1210,7 @@ export const growthGroups = [
 export const education = [
   { title: "Bachelor of Arts", org: "The University of Hong Kong", year: "2011" },
   { title: "Digital Media Design", org: "Hong Kong Design Institute", year: "2011" },
-  { title: "AWS Machine Learning — Specialty", org: "Amazon Web Services", year: "2023" },
+  { title: "AWS Machine Learning, Specialty", org: "Amazon Web Services", year: "2023" },
   { title: "MIT Machine Learning", org: "MIT", year: "2021" },
   { title: "Salesforce Marketing Cloud Consultant", org: "Salesforce", year: "2023" },
 ];
@@ -1228,7 +1226,7 @@ export const stackLayers = [
   {
     number: "01",
     name: "Intelligence",
-    tagline: "Know who to target — and why now.",
+    tagline: "Know who to target, and why now.",
     description:
       "Research and enrichment turn a blank market into a ranked set of real people and companies, with the context needed to say something worth reading.",
     tools: ["NSA / Person Finder", "Lenxys Forecast", "Storm Score"],
@@ -1246,7 +1244,7 @@ export const stackLayers = [
   {
     number: "03",
     name: "Conversion",
-    tagline: "Turn conversations into deals — and learn from every one.",
+    tagline: "Turn conversations into deals, and learn from every one.",
     description:
       "The CRM, call intelligence and creative testing layer captures what happens after the reply, scores it, and feeds the lessons back into the pitch.",
     tools: ["LenERP CRM", "Xtrac / CXEvals", "AdRankr", "PropKit"],
@@ -1257,7 +1255,7 @@ export const stackLayers = [
     name: "Growth",
     tagline: "Compound what works across channels and capital.",
     description:
-      "Marketing agents, trading systems and financial research run in parallel — the growth engine and the balance sheet improving on the same loop.",
+      "Marketing agents, trading systems and financial research run in parallel, with the growth engine and the balance sheet improving on the same loop.",
     tools: ["LenGrowth", "LenQuant", "Credit Pack", "x402 Crypto Intel"],
     outcome: "More distribution, more capital efficiency, less manual overhead.",
   },
@@ -1274,15 +1272,17 @@ export const stackLayers = [
 
 export const site = {
   name: "Fernando Guerra",
-  role: "AI engineer & growth operator",
+  role: "Growth operator & AI product builder",
   email: "fern2gue@gmail.com",
   github: "https://github.com/guerra2fernando",
   linkedin: "https://linkedin.com/in/fernando2guerra",
-  location: "Tbilisi, Georgia",
+  location: "Tbilisi, GE · New York, US · Brazil, SP",
+  locationShort: "Tbilisi · New York · São Paulo",
+  locationNote: "Always travelling",
   origin: "Brazil",
-  currentRole: "Head of Growth & CRM at LeaderBet",
+  currentRole: "Open to new projects",
   description:
-    "AI engineer, growth operator and founder building production AI products, growth engines and the systems that connect them.",
+    "Growth operator and AI product builder. I build, improve and iterate products that think, then help them grow.",
 };
 
 export const navItems = [
@@ -1303,5 +1303,5 @@ export const marqueeItems = [
   "Next.js",
   "AWS",
   "iGaming CRM",
-  "Open source",
+  "Growth strategy",
 ];

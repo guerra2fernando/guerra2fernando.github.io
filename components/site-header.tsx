@@ -46,7 +46,7 @@ export function SiteHeader() {
           <Link
             href="/"
             className="group flex items-center gap-3"
-            aria-label={`${site.name} — home`}
+            aria-label={`${site.name} home`}
           >
             <span className="relative flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/[0.03] font-mono text-[10px] tracking-tight text-bone transition-colors duration-300 group-hover:border-acid/50 group-hover:text-acid">
               FG
@@ -57,7 +57,7 @@ export function SiteHeader() {
                 {site.name}
               </span>
               <span className="mt-1 font-mono text-[9px] uppercase tracking-[0.16em] text-bone-muted">
-                AI / Growth
+                Growth / AI
               </span>
             </span>
           </Link>
@@ -95,7 +95,7 @@ export function SiteHeader() {
           <div className="flex items-center gap-3">
             <span className="hidden items-center gap-2 font-mono text-[9px] uppercase tracking-[0.14em] text-bone-muted lg:flex">
               <span className="h-1.5 w-1.5 rounded-full bg-acid animate-pulse-dot" />
-              Tbilisi, GE
+              {site.locationShort}
             </span>
             <Button asChild size="sm" className="hidden sm:inline-flex">
               <a href={`mailto:${site.email}`}>
@@ -161,7 +161,7 @@ export function SiteHeader() {
             <a href={site.linkedin} target="_blank" rel="noreferrer" className="hover:text-bone">
               LinkedIn
             </a>
-            <span>{site.location}</span>
+            <span>{site.locationNote}</span>
           </div>
         </div>
       </div>

@@ -37,7 +37,7 @@ const industryIcons = {
 };
 
 const companies = [
-  "LeaderBet",
+  "iGaming operator",
   "MongoDB",
   "Lenxys",
   "Superduper",
@@ -45,7 +45,7 @@ const companies = [
   "Casafy",
   "Exio",
   "Guru",
-  "Stake.com",
+  "Crypto casino",
   "Trademap",
   "Santander",
   "Banco BS2",
@@ -58,7 +58,7 @@ const companies = [
 export const metadata = {
   title: "About",
   description:
-    "Fernando Guerra is an AI engineer, growth operator and founder with 13+ years across AI products, fintech, iGaming, marketplaces and enterprise SaaS.",
+    "Fernando Guerra is a growth operator and AI product builder with 13+ years across growth, AI products, fintech, iGaming, marketplaces and enterprise SaaS.",
 };
 
 export default function AboutPage() {
@@ -69,18 +69,18 @@ export default function AboutPage() {
         label="About"
         title={
           <>
-            Engineer by systems.
+            Growth by <span className="serif-accent text-acid">instinct.</span>
             <br />
-            <span className="serif-accent text-acid">Operator by instinct.</span>
+            Builder by <span className="serif-accent">practice.</span>
           </>
         }
         description={
           <>
-            I am Fernando Guerra — a builder who works across the whole path from
-            model to market. For 13+ years I have shipped AI products, growth
-            engines and revenue infrastructure for startups, banks and global
-            platforms. I care about the number that proves it worked, not the deck
-            that describes it.
+            I am Fernando Guerra, a growth operator and AI product builder who
+            works across the whole path from model to market. For 13+ years I
+            have shipped AI products, growth engines and revenue infrastructure
+            for startups, banks and global platforms. I care about the number
+            that proves it worked, not the deck that describes it.
           </>
         }
         meta={
@@ -88,10 +88,11 @@ export default function AboutPage() {
             <div className="eyebrow text-acid">At a glance</div>
             <div className="mt-5 flex flex-col divide-y divide-white/[0.07]">
               {[
-                ["Based in", "Tbilisi, Georgia"],
+                ["Based between", "Tbilisi · New York · São Paulo"],
                 ["From", "Brazil"],
-                ["Currently", "Head of Growth & CRM, LeaderBet"],
-                ["Focus", "AI products · growth systems"],
+                ["Currently", "Open to new projects"],
+                ["Focus", "Growth · AI products"],
+                ["Mobility", "Always travelling"],
                 ["Languages", "PT · EN · ES · FR"],
               ].map(([label, value]) => (
                 <div key={label} className="flex items-start justify-between gap-5 py-3 first:pt-0 last:pb-0">
@@ -129,7 +130,7 @@ export default function AboutPage() {
                 <Mail className="h-3.5 w-3.5" />
               </a>
               <span className="ml-auto font-mono text-[9px] uppercase tracking-[0.1em] text-acid/70">
-                Open to select work
+                Open to new projects
               </span>
             </div>
           </div>
@@ -148,7 +149,7 @@ export default function AboutPage() {
               <div className="mt-8 hidden overflow-hidden rounded-2xl border border-white/[0.08] bg-ink-2 p-6 lg:block">
                 <div className="flex items-start justify-between">
                   <span className="eyebrow text-bone-muted/50">Trajectory</span>
-                  <span className="font-mono text-[9px] text-bone-muted/50">2012 — 2026</span>
+                  <span className="font-mono text-[9px] text-bone-muted/50">2012 to 2026</span>
                 </div>
                 <div className="mt-8 text-[7.5rem] font-medium leading-[0.72] tracking-[-0.08em] text-bone/[0.13]">
                   FG
@@ -194,9 +195,10 @@ export default function AboutPage() {
                 agents share the same rooms.
               </p>
               <p>
-                Today I am Head of Growth &amp; CRM at LeaderBet, where I own
-                growth, lifecycle and retention for a Georgian sportsbook and
-                casino brand. The through-line is the same as it has always been:
+                Most recently I led growth, CRM and lifecycle for an iGaming
+                operator, owning acquisition, retention, VIP and a 120+ campaign
+                calendar. I am now open to new projects where growth and product
+                meet. The through-line is the same as it has always been:
                 understand the system, find the leverage point, build the thing
                 that moves it.
               </p>

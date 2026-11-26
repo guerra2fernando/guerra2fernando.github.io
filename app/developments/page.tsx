@@ -9,13 +9,13 @@ import { site } from "@/lib/data";
 export const metadata = {
   title: "Developments",
   description:
-    "The full archive of Fernando Guerra's products, AI systems, growth tools and experiments — plus sixteen years of past experience.",
+    "The full archive of Fernando Guerra's products, AI systems, growth tools and experiments, plus sixteen years of past experience.",
 };
 
 const stats = [
   { value: "35+", label: "builds" },
   { value: "10+", label: "public repos" },
-  { value: "131", label: "OSS stars" },
+  { value: "1M+", label: "organic users" },
   { value: "6", label: "industries" },
 ];
 
@@ -33,7 +33,7 @@ export default function DevelopmentsPage() {
         }
         description={
           <>
-            Products, platforms, agents and experiments — the full archive of what
+            Products, platforms, agents and experiments: the full archive of what
             I have shipped, from production SaaS and open-source tools to design
             bibles and playable instruments. Filter by category, search the stack,
             or jump into the experience timeline.

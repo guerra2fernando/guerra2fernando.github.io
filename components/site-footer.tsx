@@ -14,7 +14,7 @@ export function SiteFooter() {
           <div>
             <div className="eyebrow mb-6 flex items-center gap-3">
               <span className="h-1.5 w-1.5 rounded-full bg-acid animate-pulse-dot" />
-              Available for select collaborations
+              Open to new projects
             </div>
             <h2 className="display max-w-3xl text-[clamp(2.75rem,7vw,6.5rem)] text-bone">
               Have a system
@@ -24,8 +24,8 @@ export function SiteFooter() {
           </div>
           <div className="lg:pb-2">
             <p className="max-w-sm text-[15px] leading-relaxed text-bone-muted">
-              I partner with founders and teams on AI products, growth infrastructure
-              and the systems that connect them. Tell me what is stuck.
+              I partner with founders and teams on growth systems, AI products
+              and the infrastructure that connects them. Tell me what is stuck.
             </p>
             <a
               href={`mailto:${site.email}`}
@@ -53,8 +53,8 @@ export function SiteFooter() {
               </div>
             </div>
             <p className="max-w-sm text-[13px] leading-relaxed text-bone-muted">
-              Built in Tbilisi with Next.js, Tailwind CSS and Three.js. The work is
-              real; the coffee is Georgian.
+              Built between Tbilisi, New York and São Paulo with Next.js, Tailwind
+              CSS and Three.js. The work is real; the coffee is Georgian.
             </p>
           </div>
 
@@ -106,7 +106,7 @@ export function SiteFooter() {
               </span>
               <span className="text-[13px] text-bone-muted">{site.location}</span>
               <span className="font-mono text-[10px] uppercase tracking-[0.1em] text-bone-muted/60">
-                41.7151° N, 44.8271° E
+                {site.locationNote}
               </span>
               <a
                 href="#top"
@@ -120,7 +120,7 @@ export function SiteFooter() {
 
         <div className="mt-14 flex flex-col justify-between gap-3 border-t border-white/[0.06] pt-6 font-mono text-[9px] uppercase tracking-[0.14em] text-bone-muted/50 sm:flex-row">
           <span>© 2026 {site.name}. All rights reserved.</span>
-          <span>Design & code — Fernando Guerra</span>
+          <span>Design & code: Fernando Guerra</span>
         </div>
       </div>
 

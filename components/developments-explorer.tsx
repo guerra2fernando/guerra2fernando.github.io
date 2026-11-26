@@ -483,14 +483,14 @@ export function DevelopmentsExplorer() {
             </div>
             <div className="flex flex-wrap gap-2">
               <Button asChild variant="outline" size="sm">
-                <a href="/cv/fernando-guerra-ai-engineer.pdf" download>
-                  AI CV
+                <a href="/cv/fernando-guerra-igaming.pdf" download>
+                  Growth CV
                   <ArrowDownToLine />
                 </a>
               </Button>
               <Button asChild variant="outline" size="sm">
-                <a href="/cv/fernando-guerra-igaming.pdf" download>
-                  Growth CV
+                <a href="/cv/fernando-guerra-ai-engineer.pdf" download>
+                  AI CV
                   <ArrowDownToLine />
                 </a>
               </Button>

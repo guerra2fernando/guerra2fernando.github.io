@@ -19,23 +19,23 @@ import { Button } from "@/components/ui/button";
 import { experiences, homeFeaturedSlugs, projects, site } from "@/lib/data";
 
 const heroStats = [
-  { value: "13+", label: "years building" },
+  { value: "13+", label: "years in growth" },
   { value: "35+", label: "products & tools" },
-  { value: "+43%", label: "NGR at LeaderBet" },
-  { value: "131", label: "open-source stars" },
+  { value: "+43%", label: "NGR growth" },
+  { value: "1M+", label: "organic users" },
 ];
 
 const currentFacts = [
   {
-    label: "Based in",
-    value: "Tbilisi, Georgia",
-    note: "From Brazil · remote by default",
+    label: "Based between",
+    value: "Tbilisi · New York · São Paulo",
+    note: "Always travelling",
     icon: Globe2,
   },
   {
     label: "Currently",
-    value: "Head of Growth & CRM",
-    note: "LeaderBet · iGaming",
+    value: "Open to new projects",
+    note: "Growth, AI products, operating roles",
     icon: Sparkles,
   },
   {
@@ -72,27 +72,27 @@ export default function HomePage() {
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-ink to-transparent" />
 
         <div className="container-page relative z-10 flex min-h-[calc(100svh-6rem)] flex-col justify-between pb-6 pt-8 md:pt-14">
-          <div className="pointer-events-none grid gap-10 lg:grid-cols-[1.05fr_0.95fr]">
-            <div className="pointer-events-auto max-w-[760px]">
+          <div className="pointer-events-none grid gap-10 lg:grid-cols-[1.15fr_0.85fr]">
+            <div className="pointer-events-auto max-w-[780px]">
               <div className="inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5 font-mono text-[9px] uppercase tracking-[0.16em] text-bone-muted backdrop-blur">
                 <span className="h-1.5 w-1.5 rounded-full bg-acid animate-pulse-dot" />
-                Available for select collaborations
+                Open to new projects
               </div>
 
-              <h1 className="display mt-8 max-w-[780px] text-[clamp(2.9rem,5.6vw,5.65rem)] text-bone">
-                I build systems
-                <br className="hidden sm:block" />{" "}
-                that <span className="serif-accent text-acid">think</span> —
-                <br className="hidden sm:block" />{" "}
-                and make them <span className="serif-accent">grow.</span>
+              <h1 className="display mt-8 max-w-[820px] text-[clamp(2.6rem,4.9vw,5rem)] text-bone">
+                I build, improve
+                <br className="hidden sm:block" /> and iterate.
+                <br className="hidden sm:block" /> Products that{" "}
+                <span className="serif-accent text-acid">think</span>,
+                <br className="hidden sm:block" /> then I help them{" "}
+                <span className="serif-accent">grow.</span>
               </h1>
 
               <p className="mt-7 max-w-xl text-[15px] leading-relaxed text-bone-muted md:text-[16px]">
-                AI engineer, growth operator and founder. For 13+ years I have
-                turned ambiguous ideas into products people use — multi-agent
+                Growth operator and AI product builder. For 13+ years I have
+                turned ambiguous ideas into products people use: multi-agent
                 systems, vector search, acquisition loops and the infrastructure
-                underneath. Founder of Lenxys. Currently Head of Growth &amp; CRM
-                at LeaderBet.
+                underneath. Founder of Lenxys. Currently open to new projects.
               </p>
 
               <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -116,9 +116,9 @@ export default function HomePage() {
                   {site.currentRole}
                 </span>
                 <span className="hidden h-3 w-px bg-white/10 sm:block" />
-                <span>Open source · 131 stars</span>
+                <span>Growth-first operator</span>
                 <span className="hidden h-3 w-px bg-white/10 sm:block" />
-                <span>Tbilisi, GE</span>
+                <span>{site.locationShort}</span>
               </div>
             </div>
             <div aria-hidden="true" />
@@ -164,7 +164,7 @@ export default function HomePage() {
                 Proof, not a <span className="serif-accent text-acid">pitch deck.</span>
               </>
             }
-            description="A few of the systems I have taken from a blank page to something people use, pay for or build on. The full archive covers 35+ products, tools and experiments."
+            description="A few of the products I have built, improved and helped grow. The full archive covers 35+ products, tools and experiments."
             action={{ label: "All developments", href: "/developments" }}
           />
         </Reveal>
@@ -219,7 +219,7 @@ export default function HomePage() {
                   Five layers. <span className="serif-accent">One operator.</span>
                 </>
               }
-              description="The projects are not a folder of demos. They are one connected stack — intelligence, outreach, conversion, growth and operations — built to run a company with agents in the loop."
+              description="The projects are not a folder of demos. They are one connected stack: intelligence, outreach, conversion, growth and operations, built to run a company with agents in the loop."
             />
           </Reveal>
           <Reveal delay={100}>
@@ -246,8 +246,8 @@ export default function HomePage() {
               I started in design, moved into growth, then into the systems behind
               both. That path is why I care about the whole loop: the model, the
               interface, the acquisition channel and the number that proves it
-              worked. Today I work at the intersection of AI engineering and
-              commercial operations.
+              worked. Today I work at the intersection of growth, product and
+              AI.
             </p>
             <div className="mt-8">
               <Button asChild variant="outline">
@@ -370,7 +370,7 @@ export default function HomePage() {
                     </span>
                   </span>
                   <span className="flex items-center gap-3 pt-1 font-mono text-[9px] uppercase tracking-[0.1em] text-bone-muted/50">
-                    {experience.period.replace(" — Present", "")}
+                    {experience.period.replace(" to Present", "")}
                     <ArrowUpRight className="h-3.5 w-3.5 opacity-0 transition-all duration-300 group-hover:opacity-100" />
                   </span>
                 </Link>

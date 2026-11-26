@@ -1,6 +1,6 @@
-# Fernando Guerra — Portfolio
+# Fernando Guerra | Portfolio
 
-A dark, editorial portfolio for Fernando Guerra: AI engineer, growth operator and founder.
+A dark, editorial portfolio for Fernando Guerra: growth operator, AI product builder and founder.
 
 **Live:** [guerra2fernando.github.io](https://guerra2fernando.github.io)
 
@@ -8,9 +8,9 @@ Built with Next.js 15 (static export), React 19, Tailwind CSS, shadcn-style UI p
 
 ## Pages
 
-- `/` — entrance, interactive 3D signal engine, selected work, operating stack, experience preview
-- `/about/` — story, principal industries, highlights, principles, toolbox, education
-- `/developments/` — filterable archive of 35+ projects and the full experience timeline
+- `/` : entrance, interactive 3D signal engine, selected work, operating stack, experience preview
+- `/about/` : story, principal industries, highlights, principles, toolbox, education
+- `/developments/` : filterable archive of 35+ projects and the full experience timeline
 
 ## Local development
 
